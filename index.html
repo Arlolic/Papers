@@ -12,6 +12,7 @@
             --background-color: #f8f9fa;
             --text-color: #333333;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
@@ -20,6 +21,7 @@
             margin: 0;
             padding: 40px 20px;
         }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -28,22 +30,26 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
+
         h1 {
             color: var(--primary-color);
             border-bottom: 2px solid #eaeded;
             padding-bottom: 15px;
             font-size: 2.2rem;
         }
+
         h2 {
             color: var(--secondary-color);
             margin-top: 30px;
             font-size: 1.4rem;
         }
+
         .author-meta {
             color: #7f8c8d;
             font-size: 1.1rem;
             margin-bottom: 30px;
         }
+
         .paper-card {
             border-left: 4px solid var(--accent-color);
             background: #fdfefe;
@@ -52,22 +58,26 @@
             border-radius: 0 4px 4px 0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
+
         .paper-title {
             font-weight: bold;
             font-size: 1.15rem;
             color: var(--primary-color);
             margin-bottom: 5px;
         }
+
         .paper-date {
             font-size: 0.9rem;
             color: #95a5a6;
             margin-bottom: 10px;
         }
+
         .paper-abstract {
             font-size: 0.95rem;
             color: #555;
             margin-bottom: 15px;
         }
+
         .btn-link {
             display: inline-flex;
             align-items: center;
@@ -80,9 +90,11 @@
             font-weight: 500;
             transition: background-color 0.2s;
         }
-        .btn-link:hover {
-            background-color: #2471a3;
-        }
+
+            .btn-link:hover {
+                background-color: #2471a3;
+            }
+
         footer {
             margin-top: 50px;
             text-align: center;
@@ -93,50 +105,50 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Research & Academic Publications</h1>
-    <div class="author-meta">
-        <strong>Ahmad Charba</strong><br>
-        University of Ottawa • Department of Computer Science
-    </div>
-
-    <!-- Section 1: Cryptography -->
-    <h2>Fully Homomorphic Encryption & Cryptography</h2>
-    
-    <div class="paper-card">
-        <div class="paper-title">About Nguyen et al.'s vCCA security</div>
-        <div class="paper-date">December 2023</div>
-        <div class="paper-abstract">
-            An analysis of security limitations and semantic notions bridging the gap between CPA and CCA2 security in fully homomorphic encryption (FHE). This report critiques the verified Chosen Ciphertext Attack (VCCA) frame proposed by Manulis and Nguyen, highlighting its theoretical robustness against underlying security models.
+    <div class="container">
+        <h1>Research & Academic Publications</h1>
+        <div class="author-meta">
+            <strong>Ahmad Charba</strong><br>
+            University of Ottawa • Department of Computer Science
         </div>
-        <a href="papers/vcca-security.pdf" class="btn-link" target="_blank">View PDF Document</a>
-    </div>
 
-    <!-- Section 2: IoT Security -->
-    <h2>Internet of Things (IoT) Protocols & Authentication</h2>
+        <!-- Section 1: Cryptography -->
+        <h2>Fully Homomorphic Encryption & Cryptography</h2>
 
-    <div class="paper-card">
-        <div class="paper-title">DOLO: Data Over Light Onboarding for Smart Smoke Detectors</div>
-        <div class="paper-date">2023</div>
-        <div class="paper-abstract">
-            Proposes "Data Over Light Onboarding" (DOLO), a novel onboarding protocol for smart smoke detectors utilizing ambient light sensors and standard smartphone camera flashes. This research framework replaces expensive and vulnerable SoftAP setups with secure, physically contained symmetric credential transfers.
+        <div class="paper-card">
+            <div class="paper-title">About Nguyen et al.'s vCCA security</div>
+            <div class="paper-date">December 2023</div>
+            <div class="paper-abstract">
+                An analysis of security limitations and semantic notions bridging the gap between CPA and CCA2 security in fully homomorphic encryption (FHE). This report critiques the verified Chosen Ciphertext Attack (VCCA) frame proposed by Manulis and Nguyen, highlighting its theoretical robustness against underlying security models.
+            </div>
+            <a href="papers/vcca-security.pdf" class="btn-link" target="_blank">View PDF Document</a>
         </div>
-        <a href="papers/dolo-smoke-detectors.pdf" class="btn-link" target="_blank">View PDF Document</a>
-    </div>
 
-    <div class="paper-card">
-        <div class="paper-title">A Survey of Behavioural Authentication in Internet of Things Ecosystems</div>
-        <div class="paper-date">April 2023</div>
-        <div class="paper-abstract">
-            A comprehensive survey detailing mechanisms to identify and authenticate users continuously via localized IoT sensors. The study compares machine learning model variations (e.g., Random Forests, SVMs, and RNNs) analyzing continuous biometrics such as gait patterns, voice recognition, and touch gesture behavior.
+        <!-- Section 2: IoT Security -->
+        <h2>Internet of Things (IoT) Protocols & Authentication</h2>
+
+        <div class="paper-card">
+            <div class="paper-title">DOLO: Data Over Light Onboarding for Smart Smoke Detectors</div>
+            <div class="paper-date">2023</div>
+            <div class="paper-abstract">
+                Proposes "Data Over Light Onboarding" (DOLO), a novel onboarding protocol for smart smoke detectors utilizing ambient light sensors and standard smartphone camera flashes. This research framework replaces expensive and vulnerable SoftAP setups with secure, physically contained symmetric credential transfers.
+            </div>
+            <a href="papers/dolo-smoke-detectors.pdf" class="btn-link" target="_blank">View PDF Document</a>
         </div>
-        <a href="papers/behavioural-authentication-iot.pdf" class="btn-link" target="_blank">View PDF Document</a>
-    </div>
 
-    <footer>
-        &copy; 2026 Ahmad Charba. Hosted securely on GitHub Pages.
-    </footer>
-</div>
+        <div class="paper-card">
+            <div class="paper-title">A Survey of Behavioural Authentication in Internet of Things Ecosystems</div>
+            <div class="paper-date">April 2023</div>
+            <div class="paper-abstract">
+                A comprehensive survey detailing mechanisms to identify and authenticate users continuously via localized IoT sensors. The study compares machine learning model variations (e.g., Random Forests, SVMs, and RNNs) analyzing continuous biometrics such as gait patterns, voice recognition, and touch gesture behavior.
+            </div>
+            <a href="papers/behavioural-authentication-iot.pdf" class="btn-link" target="_blank">View PDF Document</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Ahmad Charba. Hosted securely on GitHub Pages.
+        </footer>
+    </div>
 
 </body>
 </html>
