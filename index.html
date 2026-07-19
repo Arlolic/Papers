@@ -3,243 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Portfolio - Ahmad Charba</title>
+    <title>Ahmad Charba - Research Papers</title>
     <style>
         :root {
-            --primary-color: #003366;
-            --secondary-color: #4A5568;
-            --accent-color: #3182CE;
-            --bg-color: #F7FAFC;
-            --card-bg: #FFFFFF;
-            --text-color: #2D3748;
-            --border-color: #E2E8F0;
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #2980b9;
+            --background-color: #f8f9fa;
+            --text-color: #333333;
         }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: var(--bg-color);
+            background-color: var(--background-color);
             margin: 0;
-            padding: 0;
+            padding: 40px 20px;
         }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            font-weight: 700;
-        }
-
-        header p {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
         .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .quick-links {
-            background: var(--card-bg);
-            padding: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
         }
-
-        .quick-links h2 {
-            margin-top: 0;
-            font-size: 1.3rem;
+        h1 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eaeded;
+            padding-bottom: 15px;
+            font-size: 2.2rem;
         }
-
-        .directory-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        .directory-table th, .directory-table td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .directory-table th {
-            background-color: #EDF2F7;
+        h2 {
             color: var(--secondary-color);
-            font-weight: 600;
+            margin-top: 30px;
+            font-size: 1.4rem;
         }
-
-        .directory-table tr:hover {
-            background-color: #F8FAFC;
+        .author-meta {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
         }
-
         .paper-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            border-left: 5px solid var(--accent-color);
-            border-top: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-color);
+            background: #fdfefe;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
-
-        .paper-card h3 {
-            margin-top: 0;
+        .paper-title {
+            font-weight: bold;
+            font-size: 1.15rem;
             color: var(--primary-color);
-            font-size: 1.5rem;
+            margin-bottom: 5px;
         }
-
-        .meta-info {
+        .paper-date {
             font-size: 0.9rem;
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-            background: #EDF2F7;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            display: inline-block;
+            color: #95a5a6;
+            margin-bottom: 10px;
         }
-
-        .tech-tags {
-            margin-top: 1rem;
+        .paper-abstract {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
         }
-
-        .tag {
-            display: inline-block;
-            background-color: #EBF8FF;
-            color: #2B6CB0;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 4rem;
-        }
-
-        a {
-            color: var(--accent-color);
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            color: #ffffff;
+            background-color: var(--accent-color);
             text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.2s;
         }
-
-        a:hover {
-            text-decoration: underline;
+        .btn-link:hover {
+            background-color: #2471a3;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #bdc3c7;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Ahmad Charba</h1>
-        <p>Research Portfolio & Document Index</p>
-        <p style="font-size: 0.9rem; margin-top: 0.5rem;">University of Ottawa, Canada | <a href="mailto:achar238@uottawa.ca" style="color: #90CDF4;">achar238@uottawa.ca</a></p>
-    </header>
+<div class="container">
+    <h1>Research & Academic Publications</h1>
+    <div class="author-meta">
+        <strong>Ahmad Charba</strong><br>
+        University of Ottawa • Department of Computer Science
+    </div>
 
-    <div class="container">
-        
-        <!-- Quick Links / Directory Table -->
-        <section class="quick-links">
-            <h2>📋 Document Directory</h2>
-            <table class="directory-table">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Primary Focus</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="#paper1">A Survey of Behavioural Authentication in IoT Ecosystems</a></td>
-                        <td>IoT Security &amp; User Identification[cite: 1]</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#paper2">About Nguyen et al.'s vCCA security</a></td>
-                        <td>Advanced Cryptography[cite: 2]</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#paper3">DOLO: Data Over Light Onboarding for Smart Smoke Detectors</a></td>
-                        <td>Hardware &amp; Protocol Design[cite: 3]</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <!-- Section 1: Cryptography -->
+    <h2>Fully Homomorphic Encryption & Cryptography</h2>
+    
+    <div class="paper-card">
+        <div class="paper-title">About Nguyen et al.'s vCCA security</div>
+        <div class="paper-date">December 2023</div>
+        <div class="paper-abstract">
+            An analysis of security limitations and semantic notions bridging the gap between CPA and CCA2 security in fully homomorphic encryption (FHE). This report critiques the verified Chosen Ciphertext Attack (VCCA) frame proposed by Manulis and Nguyen, highlighting its theoretical robustness against underlying security models.
+        </div>
+        <a href="papers/vcca-security.pdf" class="btn-link" target="_blank">View PDF Document</a>
+    </div>
 
-        <!-- Detailed Research Sections -->
-        <section id="details">
-            <h2>🔍 Detailed Summaries</h2>
+    <!-- Section 2: IoT Security -->
+    <h2>Internet of Things (IoT) Protocols & Authentication</h2>
 
-            <!-- Paper 1 -->
-            <div class="paper-card" id="paper1">
-                <h3>1. A Survey of Behavioural Authentication in Internet of Things Ecosystems</h3>
-                <div class="meta-info"><strong>Context:</strong> Carleton University (April 10, 2023)[cite: 1]</div>
-                <p><strong>Abstract Overview:</strong> This survey evaluates the landscape of securing access to personal and shared IoT devices by leveraging user behaviour (what a person <em>does</em>) via built-in sensors (e.g., accelerometers, microphones)[cite: 1]. It explores machine learning classifiers—primarily Support Vector Machines (SVM) and Decision Trees/Random Forests—for seamless user authentication through gait, gesture, and voice analytics[cite: 1].</p>
-                <p><strong>Key Challenges Highlighted:</strong> High computational demands, lack of standardized performance guidelines, vulnerability to mimicking or membership inference attacks, and data privacy vulnerabilities[cite: 1].</p>
-                <div class="tech-tags">
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Behaviour-based Biometrics</span>
-                    <span class="tag">Continuous Authentication</span>
-                    <span class="tag">Gait/Gesture/Voice</span>
-                </div>
-            </div>
+    <div class="paper-card">
+        <div class="paper-title">DOLO: Data Over Light Onboarding for Smart Smoke Detectors</div>
+        <div class="paper-date">2023</div>
+        <div class="paper-abstract">
+            Proposes "Data Over Light Onboarding" (DOLO), a novel onboarding protocol for smart smoke detectors utilizing ambient light sensors and standard smartphone camera flashes. This research framework replaces expensive and vulnerable SoftAP setups with secure, physically contained symmetric credential transfers.
+        </div>
+        <a href="papers/dolo-smoke-detectors.pdf" class="btn-link" target="_blank">View PDF Document</a>
+    </div>
 
-            <!-- Paper 2 -->
-            <div class="paper-card" id="paper2">
-                <h3>2. About Nguyen et al.'s vCCA security</h3>
-                <div class="meta-info"><strong>Context:</strong> Technical Analysis / Literature Critique (December 2023)[cite: 2]</div>
-                <p><strong>Abstract Overview:</strong> A rigorous evaluation of the breakthrough paper <em>"Fully Homomorphic Encryption beyond IND-CCA1 Security: Integrity through Verifiability"</em> by Mark Manulis and Jerome Nguyen[cite: 2]. The report details <strong>VCCA (Verifiable Chosen Ciphertext Attack) security</strong>, a stronger semantic security framework applicable to malleable Fully Homomorphic Encryption (FHE) architectures[cite: 2].</p>
-                <p><strong>Key Components Evaluated:</strong> The use of Succinct Non-Interactive Arguments of Knowledge (SNARKs) to prove the validity of homomorphic evaluations, alongside a critique regarding the real-world performance overheads of these protocols[cite: 2].</p>
-                <div class="tech-tags">
-                    <span class="tag">Fully Homomorphic Encryption (FHE)</span>
-                    <span class="tag">VCCA Security</span>
-                    <span class="tag">Semantic Security</span>
-                    <span class="tag">SNARKs</span>
-                </div>
-            </div>
-
-            <!-- Paper 3 -->
-            <div class="paper-card" id="paper3">
-                <h3>3. DOLO: Data Over Light Onboarding for Smart Smoke Detectors</h3>
-                <div class="meta-info"><strong>Context:</strong> University of Ottawa Research Project[cite: 3]</div>
-                <p><strong>Abstract Overview:</strong> Proposes <strong>DOLO (Data Over Light Onboarding)</strong>, a novel physical-layer onboarding protocol designed to replace unreliable, vulnerable SoftAP (temporary Wi-Fi hotspot) setup models for smart home sensors[cite: 3].</p>
-                <p><strong>Protocol Mechanism:</strong> Utilizing a physical smartphone flash to beam encrypted Wi-Fi configuration credentials via m-level or On-Off light encoding directly into an ambient light sensor (using the Google Nest Protect as a reference architecture)[cite: 3]. DOLO significantly slashes the device attack surface while overcoming common iOS/Android network switching constraints[cite: 3].</p>
-                <div class="tech-tags">
-                    <span class="tag">Smart Home IoT</span>
-                    <span class="tag">Data-over-Light (DoL)</span>
-                    <span class="tag">Photovoltaic Sensors</span>
-                    <span class="tag">Alternative Onboarding</span>
-                </div>
-            </div>
-        </section>
-
+    <div class="paper-card">
+        <div class="paper-title">A Survey of Behavioural Authentication in Internet of Things Ecosystems</div>
+        <div class="paper-date">April 2023</div>
+        <div class="paper-abstract">
+            A comprehensive survey detailing mechanisms to identify and authenticate users continuously via localized IoT sensors. The study compares machine learning model variations (e.g., Random Forests, SVMs, and RNNs) analyzing continuous biometrics such as gait patterns, voice recognition, and touch gesture behavior.
+        </div>
+        <a href="papers/behavioural-authentication-iot.pdf" class="btn-link" target="_blank">View PDF Document</a>
     </div>
 
     <footer>
-        <p>&copy; 2026 Ahmad Charba. All rights reserved.</p>
+        &copy; 2026 Ahmad Charba. Hosted securely on GitHub Pages.
     </footer>
+</div>
 
 </body>
 </html>
