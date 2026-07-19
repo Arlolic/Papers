@@ -6,11 +6,13 @@
     <title>Ahmad Charba - Research Papers</title>
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #2980b9;
-            --background-color: #f8f9fa;
-            --text-color: #333333;
+            --primary-color: #e2e8f0;      /* Crisp, bright text for headings */
+            --secondary-color: #cbd5e1;    /* Soft silver for subheadings */
+            --accent-color: #38bdf8;       /* Electric blue for links/accents */
+            --background-color: #0f172a;   /* Deep slate midnight background */
+            --card-background: #1e293b;    /* Slightly lighter slate for cards */
+            --text-color: #94a3b8;         /* Muted grey for readable body text */
+            --border-color: #334155;       /* Subtle divider color */
         }
 
         body {
@@ -25,38 +27,41 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: #ffffff;
+            background: var(--card-background);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
         }
 
         h1 {
             color: var(--primary-color);
-            border-bottom: 2px solid #eaeded;
+            border-bottom: 2px solid var(--border-color);
             padding-bottom: 15px;
             font-size: 2.2rem;
+            margin-top: 0;
         }
 
         h2 {
             color: var(--secondary-color);
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 1.4rem;
         }
 
         .author-meta {
-            color: #7f8c8d;
+            color: #64748b;
             font-size: 1.1rem;
             margin-bottom: 30px;
         }
 
         .paper-card {
             border-left: 4px solid var(--accent-color);
-            background: #fdfefe;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            border-radius: 0 4px 4px 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            background: rgba(15, 23, 42, 0.4);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+            border: 1px solid var(--border-color);
+            border-left: none; /* Keep the left accent highlight clean */
         }
 
         .paper-title {
@@ -68,38 +73,40 @@
 
         .paper-date {
             font-size: 0.9rem;
-            color: #95a5a6;
-            margin-bottom: 10px;
+            color: #64748b;
+            margin-bottom: 12px;
         }
 
         .paper-abstract {
             font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 15px;
+            color: var(--text-color);
+            margin-bottom: 20px;
         }
 
         .btn-link {
             display: inline-flex;
             align-items: center;
-            color: #ffffff;
+            color: #0f172a;
             background-color: var(--accent-color);
             text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 4px;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-size: 0.9rem;
-            font-weight: 500;
-            transition: background-color 0.2s;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
         }
 
-            .btn-link:hover {
-                background-color: #2471a3;
-            }
+        .btn-link:hover {
+            background-color: #7dd3fc;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+        }
 
         footer {
             margin-top: 50px;
             text-align: center;
             font-size: 0.85rem;
-            color: #bdc3c7;
+            color: #475569;
         }
     </style>
 </head>
@@ -146,7 +153,7 @@
         </div>
 
         <footer>
-            &copy; 2026 Ahmad Charba. 
+            &copy; 2026 Ahmad Charba. All rights reserved.
         </footer>
     </div>
 
