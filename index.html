@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Library</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --primary: #0d6efd;
+            --primary-hover: #0b5ed7;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        .card-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+            flex: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(13, 110, 253, 0.04);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Shared Documents</h1>
+            <p class="subtitle">View or download my hosted PDF files.</p>
+        </header>
+
+        <main class="grid">
+            <!-- Document Card 1 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">Project Proposal</h2>
+                    <p class="card-description">The complete project brief, timelines, and budget breakdown for Q3 plans.</p>
+                </div>
+                <div class="button-group">
+                    <a href="pdfs/project-proposal.pdf" class="btn btn-primary" target="_blank">View PDF</a>
+                    <a href="pdfs/project-proposal.pdf" class="btn btn-outline" download>Download</a>
+                </div>
+            </div>
+
+            <!-- Document Card 2 -->
+            <div class="card">
+                <div>
+                    <h2 class="card-title">User Guide & Manual</h2>
+                    <p class="card-description">A comprehensive step-by-step documentation manual detailing setup and onboarding config.</p>
+                </div>
+                <div class="button-group">
+                    <a href="pdfs/user-manual.pdf" class="btn btn-primary" target="_blank">View PDF</a>
+                    <a href="pdfs/user-manual.pdf" class="btn btn-outline" download>Download</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Hosted securely using GitHub Pages</p>
+        </footer>
+    </div>
+
+</body>
+</html>
