@@ -46,6 +46,15 @@
             color: var(--secondary-color);
             margin-top: 40px;
             font-size: 1.4rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
         }
 
         .author-meta {
@@ -81,6 +90,39 @@
             font-size: 0.95rem;
             color: var(--text-color);
             margin-bottom: 20px;
+        }
+
+        .report-body {
+            font-size: 0.95rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .report-body ul, .report-body ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .report-body li {
+            margin-bottom: 8px;
+        }
+
+        .references {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .references ol {
+            padding-left: 20px;
+        }
+
+        .references li {
+            margin-bottom: 10px;
+            line-height: 1.4;
         }
 
         .btn-link {
@@ -160,6 +202,19 @@
                 A comprehensive survey detailing mechanisms to identify and authenticate users continuously via localized IoT sensors. The study compares machine learning model variations (e.g., Random Forests, SVMs, and RNNs) analyzing continuous biometrics such as gait patterns, voice recognition, and touch gesture behavior.
             </div>
             <a href="papers/behavioural-authentication-iot.pdf" class="btn-link" target="_blank">View PDF Document</a>
+        </div>
+
+        <!-- Section 3: Network Privacy -->
+        <h2>Network Privacy & Anonymous Communication</h2>
+
+        <div class="paper-card">
+            <div class="paper-title">Written Report on "Surakav: Generation Realistic Traces for a Strong Website Fingerprinting Defense", by Gong et al.</div>
+            <div class="paper-date">April 2023</div>
+            <div class="paper-abstract">
+                An analysis and critique of Surakav, a generative adversarial network (GAN) based trace generator designed to defend against advanced website fingerprinting (WF) attacks on the Tor network. The report evaluates its mechanics, performance overhead, and long-term implications for anonymous communication.
+            </div>
+            <a href="papers/SurakavReport.pdf" class="btn-link" target="_blank">View PDF Document</a>
+
         </div>
 
         <footer>
